@@ -36,7 +36,9 @@ function App() {
 
     inputEmoji in emojiDictionary
       ? setMeaning(emojiDictionary[inputEmoji])
-      : setMeaning("failure to recognize this emoji!");
+      : setMeaning(
+          "failed to recognize this emoji, will update soon if it's valid..."
+        );
   }
 
   /**
@@ -60,7 +62,7 @@ function App() {
           className="emoji-input"
           onChange={emojiChangeHandler}
           value={emoji}
-          placeholder={"Search your emoji"}
+          placeholder={"search one emoji at a time"}
         />
         <h2> {emoji} </h2>
         <h3> {meaning} </h3>
