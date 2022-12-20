@@ -13,6 +13,7 @@ function Footer() {
               className="link"
               target="_blank"
               href="https://github.com/gautam-balamurali"
+              rel="noopener noreferrer"
             >
               gitHub
             </a>
@@ -22,6 +23,7 @@ function Footer() {
               className="link"
               target="_blank"
               href="https://www.linkedin.com/in/gautam-balamurali"
+              rel="noopener noreferrer"
             >
               linkedIn
             </a>
@@ -31,6 +33,7 @@ function Footer() {
               className="link"
               target="_blank"
               href="https://twitter.com/codewithash"
+              rel="noopener noreferrer"
             >
               twitter
             </a>
