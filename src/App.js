@@ -1,15 +1,17 @@
 /* eslint-disable */
 import { useState } from "react";
-import emojiDictionary from "./config/app-config";
+import * as AppConstants from "./config/app-config";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "./App.css";
 
-const emojisToDisplay = Object.keys(emojiDictionary).slice(0, 10);
+const emojisToDisplay = Object.keys(AppConstants.EMOJI_DICTIONARY).slice(0, 10);
 
 function App() {
   const [emoji, setEmoji] = useState("");
-  const [meaning, setMeaning] = useState("translation will appear here...");
+  const [meaning, setMeaning] = useState(
+    AppConstants.EMOJI_INTERPRETATION.DEFAULT_MESSAGE
+  );
 
   /**
    * Fucntion to handle emoji change
@@ -18,27 +20,22 @@ function App() {
   function emojiChangeHandler(event) {
     const inputEmoji = event.target.value;
 
-    /**regex for letters and numbers */
-    const letterNumber = /^[0-9a-zA-Z]+$/;
-
-    /**regex for special characters */
-    const specialChars = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-
     setEmoji(inputEmoji);
 
-    if (inputEmoji.match(letterNumber) || inputEmoji.match(specialChars)) {
-      setMeaning("please enter a valid emoji");
+    if (
+      inputEmoji.match(AppConstants.LETTERS_NUMBERS) ||
+      inputEmoji.match(AppConstants.SPECIAL_CHARACTERS)
+    ) {
+      setMeaning(AppConstants.EMOJI_INTERPRETATION.INVALID_INPUT_MESSAGE);
       return;
     } else if (inputEmoji.length === 0) {
-      setMeaning("translation will appear here...");
+      setMeaning(AppConstants.EMOJI_INTERPRETATION.DEFAULT_MESSAGE);
       return;
     }
 
-    inputEmoji in emojiDictionary
-      ? setMeaning(emojiDictionary[inputEmoji])
-      : setMeaning(
-          "failed to recognize this emoji, will update soon if it's valid..."
-        );
+    inputEmoji in AppConstants.EMOJI_DICTIONARY
+      ? setMeaning(AppConstants.EMOJI_DICTIONARY[inputEmoji])
+      : setMeaning(AppConstants.EMOJI_INTERPRETATION.FAILED_MESSAGE);
   }
 
   /**
@@ -47,7 +44,7 @@ function App() {
    */
   function emojiClickHandler(inputEmoji) {
     setEmoji(inputEmoji);
-    setMeaning(emojiDictionary[inputEmoji]);
+    setMeaning(AppConstants.EMOJI_DICTIONARY[inputEmoji]);
   }
 
   return (
@@ -62,7 +59,7 @@ function App() {
           className="emoji-input"
           onChange={emojiChangeHandler}
           value={emoji}
-          placeholder={"search one emoji at a time"}
+          placeholder={"search one emoji at a time..."}
         />
         <h2> {emoji} </h2>
         <h3> {meaning} </h3>
