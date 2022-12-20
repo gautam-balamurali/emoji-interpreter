@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState } from "react";
 import emojiDictionary from "./config/app-config";
 import Header from "./components/header";
@@ -28,7 +29,7 @@ function App() {
     if (inputEmoji.match(letterNumber) || inputEmoji.match(specialChars)) {
       setMeaning("please enter a valid emoji");
       return;
-    } else if (inputEmoji.length == 0) {
+    } else if (inputEmoji.length === 0) {
       setMeaning("translation will appear here...");
       return;
     }
