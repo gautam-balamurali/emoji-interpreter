@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**File to declare all the app constants */
 
 const EMOJI_DICTIONARY = {
