@@ -1,4 +1,8 @@
-const emojiDictionary = {
+/* eslint-disable */
+
+/**File to declare all the app constants */
+
+const EMOJI_DICTIONARY = {
   "😊": "Smiling",
   "❤️": "Love",
   "🏏": "Cricket Game",
@@ -26,4 +30,22 @@ const emojiDictionary = {
   "😔": "Sad",
 };
 
-export default emojiDictionary;
+const EMOJI_INTERPRETATION = {
+  DEFAULT_MESSAGE: "translation will appear here...",
+  FAILED_MESSAGE:
+    "failed to recognize this emoji, will update soon if it's valid...",
+  INVALID_INPUT_MESSAGE: "please enter a valid emoji...",
+};
+
+/**regex for letters and numbers */
+const LETTERS_NUMBERS = /^[0-9a-zA-Z]+$/;
+
+/**regex for special characters */
+const SPECIAL_CHARACTERS = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+export {
+  EMOJI_DICTIONARY,
+  EMOJI_INTERPRETATION,
+  LETTERS_NUMBERS,
+  SPECIAL_CHARACTERS,
+};

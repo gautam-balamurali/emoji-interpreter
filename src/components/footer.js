@@ -15,7 +15,7 @@ function Footer() {
               href="https://github.com/gautam-balamurali"
               rel="noopener noreferrer"
             >
-              gitHub
+              github
             </a>
           </li>
           <li>
@@ -25,7 +25,7 @@ function Footer() {
               href="https://www.linkedin.com/in/gautam-balamurali"
               rel="noopener noreferrer"
             >
-              linkedIn
+              linkedin
             </a>
           </li>
           <li>
