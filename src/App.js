@@ -75,7 +75,7 @@ function App() {
           ))}
         </div>
       </div>
-      {/* Header Ends*/}
+      {/* Section Ends*/}
 
       {/* Footer Begins*/}
       <Footer></Footer>
