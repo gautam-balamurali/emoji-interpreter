@@ -1,6 +1,8 @@
 # emoji-interpreter
 
-A simple emoji interpreter to decode the emoji meaning. Search one emoji at a time and it's meaning will be rendered dynamically. Invalid emoji input validation is also handled accordingly.
+* A simple emoji interpreter to decode the emoji meaning. 
+* Search one emoji at a time and it's meaning will be rendered dynamically. 
+* Invalid emoji input validation is also handled accordingly.
 
 # Sample input/output
 
