@@ -4,7 +4,7 @@
 * Search one emoji at a time and it's meaning will be rendered dynamically. 
 * Invalid emoji input validation is also handled accordingly.
 
-# Sample input/output
+## Sample input/output
 
 ![image](https://user-images.githubusercontent.com/27736288/208901834-a4495943-6127-4650-88ea-8d08052b66c1.png)
 
@@ -12,20 +12,20 @@
 ![image](https://user-images.githubusercontent.com/27736288/208901784-20003e28-36ef-4ac5-8e39-4fb53370f763.png)
 
 
-# Tech Stack
+## Tech Stack
 
 * React
 * Netlify
 
-# Preview
+## Preview
 
 [View live](https://emoji-interpreter-gautam-balamurali.netlify.app/)
 
-# License
+## License
 
 [View license](https://github.com/gautam-balamurali/emoji-interpreter/blob/master/LICENSE.md)
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
