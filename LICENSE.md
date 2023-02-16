@@ -1,4 +1,4 @@
-Copyright © 2022 Gautam Balamurali gtmbalamurali@gmail.com. All Rights Reserved.
+Copyright © 2023 Gautam Balamurali gtmbalamurali@gmail.com. All Rights Reserved.
 
 This file is part of the emoji-interpreter(EmojiInterpreter) project.
 
